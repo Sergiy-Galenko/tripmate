@@ -1,0 +1,53 @@
+form {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+form h3 {
+    margin-top: 0;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input {
+    margin: 5px 0 15px 0;
+    padding: 5px;
+    width: 100%;
+}
+
+form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+.route-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.route-buttons button {
+    margin: 0 5px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.route-buttons button:hover {
+    background-color: #45a049;
+}

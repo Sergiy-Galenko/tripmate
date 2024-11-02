@@ -1,0 +1,81 @@
+/* src/components/MapWithPlaces.css */
+.map-container {
+    padding: 20px;
+}
+
+.route-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.route-buttons button {
+    margin: 0 5px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.route-buttons button:hover {
+    background-color: #45a049;
+}
+
+.info-card {
+    background-color: #f0f8ff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.recommendations {
+    margin-top: 20px;
+}
+
+.recommendation-card {
+    background-color: #fffaf0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h3 {
+    margin-top: 0;
+}
+
+.modal-content button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #d32f2f;
+}

@@ -1,10 +1,24 @@
 const mongoose = require('mongoose');
 
-const TripSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  description: { type: String },
-  destinations: [{ location: String, notes: String }],
-  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+const tripSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+  },
+  photos: {
+    type: [String],
+  },
+  favorite: {
+    type: Boolean,
+    default: false, // Вказуємо, що маршрут не є улюбленим за замовчуванням
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
-module.exports = mongoose.model('Trip', TripSchema);
+module.exports = mongoose.model('Trip', tripSchema);

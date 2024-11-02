@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
-import { createTrip } from '../services/tripService';
+import { updateTrip } from '../services/tripService';
 
-const AddTripForm = ({ onAdd }) => {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
+const EditTripForm = ({ trip, onUpdate, onCancel }) => {
+  const [title, setTitle] = useState(trip.title);
+  const [description, setDescription] = useState(trip.description);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const newTrip = await createTrip({ title, description });
-    onAdd(newTrip);
-    setTitle('');
-    setDescription('');
+    const updatedTrip = await updateTrip(trip._id, { title, description });
+    onUpdate(updatedTrip);
   };
 
   return (
@@ -27,9 +25,10 @@ const AddTripForm = ({ onAdd }) => {
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <button type="submit">Додати</button>
+      <button type="submit">Зберегти</button>
+      <button type="button" onClick={onCancel}>Скасувати</button>
     </form>
   );
 };
 
-export default AddTripForm;
+export default EditTripForm;
